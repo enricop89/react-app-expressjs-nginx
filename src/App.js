@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+  const basename = process.env.REACT_APP_BASENAME || null;
   return (
-    <Router>
+    <Router basename={basename}>
       <div>
         <nav>
           <ul>
