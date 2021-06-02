@@ -11,8 +11,6 @@ app.use(bodyParser.json());
 const root = require('path').join(__dirname, 'build');
 app.use(express.static(root));
 
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
